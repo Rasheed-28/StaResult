@@ -361,21 +361,21 @@ function StudentsTable({ students, onViewStudent, onEditStudent, onDeleteStudent
                       className="p-2 hover:bg-sky-50 text-sky-600 rounded-lg transition"
                       title="View Details"
                     >
-                      <Eye size={18} />
+                      <Eye size={18} className="cursor-pointer"/>
                     </button>
                     <button
                       onClick={() => onEditStudent(student)}
                       className="p-2 hover:bg-emerald-50 text-emerald-600 rounded-lg transition"
                       title="Edit"
                     >
-                      <Edit size={18} />
+                      <Edit size={18} className="cursor-pointer"/>
                     </button>
                     <button
                       onClick={() => onDeleteStudent(student)}
                       className="p-2 hover:bg-red-50 text-red-600 rounded-lg transition"
                       title="Delete"
                     >
-                      <Trash2 size={18} />
+                      <Trash2 size={18} className="cursor-pointer"/>
                     </button>
                   </div>
                 </td>

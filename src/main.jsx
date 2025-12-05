@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import Students from "./pages/Students";
 import Classes from "./pages/Classes";
 import Results from "./pages/Results";
+import FailureData from "./pages/Failure";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="students" element={<Students />} />
           <Route path="classes" element={<Classes />} />
           <Route path="results" element={<Results />} />
+          <Route path="failure" element={<FailureData />} />
     
         </Route>
       </Routes>

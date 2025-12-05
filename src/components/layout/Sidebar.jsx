@@ -19,11 +19,12 @@ export default function Sidebar() {
     { icon: Users, label: "Students", path: "/students" },
     { icon: BookOpen, label: "Classes", path: "/classes" },
     { icon: FileText, label: "Results", path: "/results" },
-    { icon: AlertTriangle, label: "Failure Data", path: "/failure-data" },
+    { icon: AlertTriangle, label: "Failure Data", path: "/failure" },
     { icon: Settings, label: "Settings", path: "/settings" },
   ];
 
   const currentPath = location.pathname;
+
 
   return (
     <div className="w-64 bg-gradient-to-b from-sky-600 to-sky-800 text-white h-screen flex flex-col shadow-2xl">

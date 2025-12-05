@@ -228,7 +228,7 @@ export default function Classes() {
         <div className="flex gap-2 border-b border-gray-200">
           <button
             onClick={() => setActiveTab("classes")}
-            className={`px-6 py-3 font-medium transition-all ${
+            className={`cursor-pointer px-6 py-3 font-medium transition-all ${
               activeTab === "classes"
                 ? "text-sky-600 border-b-2 border-sky-600"
                 : "text-gray-600 hover:text-gray-800"
@@ -241,7 +241,7 @@ export default function Classes() {
           </button>
           <button
             onClick={() => setActiveTab("subjects")}
-            className={`px-6 py-3 font-medium transition-all ${
+            className={`cursor-pointer px-6 py-3 font-medium transition-all ${
               activeTab === "subjects"
                 ? "text-sky-600 border-b-2 border-sky-600"
                 : "text-gray-600 hover:text-gray-800"
@@ -341,15 +341,15 @@ function ClassesActions({
             </div>
           )}
 
-          <button onClick={onExport} className="p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+          <button onClick={onExport} className="cursor-pointer p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
             <Download size={18} className="text-gray-600" />
           </button>
-          <button onClick={onImport} className="p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+          <button onClick={onImport} className="cursor-pointer p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
             <Upload size={18} className="text-gray-600" />
           </button>
           <button
             onClick={onAdd}
-            className="flex items-center gap-2 px-4 py-3 bg-sky-600 text-white rounded-xl hover:bg-sky-700 transition font-medium"
+            className="cursor-pointer flex items-center gap-2 px-4 py-3 bg-sky-600 text-white rounded-xl hover:bg-sky-700 transition font-medium"
           >
             <Plus size={18} />
             <span className="hidden sm:inline">Add {activeTab === "classes" ? "Class" : "Subject"}</span>
@@ -505,27 +505,27 @@ function ClassesTable({ classes, onViewClass, onEditClass, onDeleteClass }) {
                   </span>
                 </td>
                 <td className="px-6 py-4">
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 cursor-pointer">
                     <button
                       onClick={() => onViewClass(cls)}
-                      className="p-2 hover:bg-sky-50 text-sky-600 rounded-lg transition"
+                      className="cursor-pointer p-2 hover:bg-sky-50 text-sky-600 rounded-lg transition"
                       title="View Details"
                     >
-                      <Eye size={18} />
+                      <Eye size={18} className="cursor-pointer" />
                     </button>
                     <button
                       onClick={() => onEditClass(cls)}
                       className="p-2 hover:bg-emerald-50 text-emerald-600 rounded-lg transition"
                       title="Edit"
                     >
-                      <Edit size={18} />
+                      <Edit size={18} className="cursor-pointer" />
                     </button>
                     <button
                       onClick={() => onDeleteClass(cls)}
                       className="p-2 hover:bg-red-50 text-red-600 rounded-lg transition"
                       title="Delete"
                     >
-                      <Trash2 size={18} />
+                      <Trash2 size={18} className="cursor-pointer" />
                     </button>
                   </div>
                 </td>
