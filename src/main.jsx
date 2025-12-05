@@ -10,6 +10,8 @@ import Students from "./pages/Students";
 import Classes from "./pages/Classes";
 import Results from "./pages/Results";
 import FailureData from "./pages/Failure";
+import Settings from "./pages/Settings";
+import Sessions from "./pages/Sessions";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -17,10 +19,12 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/*" element={<Layout />}>
           <Route index element={<Dashboard />} />
+          <Route path="sessions" element={<Sessions />} />
           <Route path="students" element={<Students />} />
           <Route path="classes" element={<Classes />} />
           <Route path="results" element={<Results />} />
           <Route path="failure" element={<FailureData />} />
+          <Route path="settings" element={<Settings />} />
     
         </Route>
       </Routes>

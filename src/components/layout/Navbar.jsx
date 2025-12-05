@@ -34,12 +34,12 @@ export default function Navbar() {
             onClick={() => setDropdownOpen(!dropdownOpen)}
             className="cursor-pointer flex items-center gap-3 p-2 rounded-xl hover:bg-gray-100 transition-all duration-200 group"
           >
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-sky-500 to-sky-600 flex items-center justify-center text-white font-bold shadow-md">
-              A
+            <div className="w-10 h-10 rounded-full  flex items-center justify-center text-white font-bold shadow-md">
+              <img src="/assets/profile.jpg" className="w-10 h-10 rounded-3xl" alt="" />
             </div>
             <div className="hidden lg:block text-left">
-              <p className="text-sm font-semibold text-gray-800">Admin User</p>
-              <p className="text-xs text-gray-500">admin@school.edu</p>
+              <p className="text-sm font-semibold text-gray-800">Abdul Rasheed</p>
+              <p className="text-xs text-gray-500">rasheed7249@gmail.com</p>
             </div>
             <ChevronDown
               size={16}
@@ -58,8 +58,8 @@ export default function Navbar() {
               />
               <div className="absolute right-0 mt-3 w-64 bg-white rounded-2xl shadow-xl border border-gray-100 py-3 z-50 overflow-hidden">
                 <div className="px-5 py-3 border-b border-gray-100">
-                  <p className="font-semibold text-gray-800">Admin User</p>
-                  <p className="text-xs text-gray-500">admin@school.edu</p>
+                  <p className="font-semibold text-gray-800">Abdul Rasheed</p>
+                  <p className="text-xs text-gray-500">rasheed7249@gmail.com</p>
                 </div>
                 <button
                   onClick={() => {
