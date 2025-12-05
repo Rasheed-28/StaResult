@@ -185,13 +185,13 @@ export default function Results() {
       </div>
       
       {/* Term Selection */}
-      <div className="mb-6">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-4">
+      <div className="mb-6 cursor-pointer">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-4 cursor-pointer">
           {terms.map((term) => (
             <button
               key={term.id}
               onClick={() => setSelectedTerm(term.id)}
-              className={`p-5 rounded-xl border-2 transition-all ${
+              className={`p-5 rounded-xl border-2 transition-all cursor-pointer ${
                 selectedTerm === term.id
                   ? "border-sky-500 bg-white shadow-lg scale-105"
                   : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-md"
@@ -243,7 +243,7 @@ export default function Results() {
         <div className="flex justify-center">
           <button
             onClick={handleViewResultCards}
-            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl hover:from-purple-700 hover:to-purple-800 transition-all shadow-md hover:shadow-lg font-medium"
+            className="cursor-pointer flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl hover:from-purple-700 hover:to-purple-800 transition-all shadow-md hover:shadow-lg font-medium"
           >
             <CreditCard size={20} />
             <span>View Result Cards</span>
@@ -317,7 +317,7 @@ function ResultsActions({
 
           <button
             onClick={onExportAll}
-            className="flex items-center gap-2 px-4 py-3 bg-sky-600 text-white rounded-xl hover:bg-sky-700 transition font-medium"
+            className="cursor-pointer flex items-center gap-2 px-4 py-3 bg-sky-600 text-white rounded-xl hover:bg-sky-700 transition font-medium"
           >
             <Download size={18} />
             <span className="hidden sm:inline">Export Results</span>
@@ -458,14 +458,14 @@ function ResultsTable({ results, onViewResult, onDownloadResult }) {
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => onViewResult(result)}
-                      className="p-2 hover:bg-sky-50 text-sky-600 rounded-lg transition"
+                      className="cursor-pointer p-2 hover:bg-sky-50 text-sky-600 rounded-lg transition"
                       title="View Details"
                     >
                       <Eye size={18} />
                     </button>
                     <button
                       onClick={() => onDownloadResult(result)}
-                      className="p-2 hover:bg-emerald-50 text-emerald-600 rounded-lg transition"
+                      className="cursor-pointer p-2 hover:bg-emerald-50 text-emerald-600 rounded-lg transition"
                       title="Download Result"
                     >
                       <Download size={18} />
